@@ -1,3 +1,6 @@
+```html
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 # Algorithmic-Toolbox
 My solution for the "Algorithmic Toolbox" course on Coursera:
 https://www.coursera.org/learn/algorithmic-toolbox/
@@ -57,8 +60,9 @@ where $a > 0$ and $b>1$
     3. Combine: Combine the solutions of the sub-problems.
 
 2. **Master Theorem:** If $T(n) = aT(\lceil n/b \rceil) + O(n^d)$ for constants $a>0$, $b>1$ and $d\geq0$, then, it can be proven using recurrence trees that:
-<img align="center" src="data:image/png;base64,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">
-```math
+```html
+<div>
+$$
 \begin{matrix}
 T(n) &= \left\{
 \begin{array}{ll}
@@ -68,7 +72,8 @@ O(n^{\log_b a}) & \text{for } d < \log_b a \\
 \end{array}
 \right.
 \end{matrix}
-```
+$$
+</div>
 
 3. Example Problems:
 * **Binary Search** to find the position of an element in a sorted array.
