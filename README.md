@@ -129,21 +129,7 @@ $$
         * Time complexity: $O(n^3)$.
         * We can determine the element $M(i,j)$ using the recurrence relation ($m(i, j)$ can be determined very similarly by choosing the minimum value instead of maximum):
 
-    <div class="math">
-    $$
-    \begin{aligned}
-    M(i,j) &= 
-    max_{i\leq k \leq j-1} \left\{
-    \begin{array}{ll}
-    M(i, k) op_k M(k+1, j) \\
-    M(i, k) op_k m(k+1, j) \\
-    m(i, k) op_k M(k+1, j) \\
-    m(i, k) op_k m(k+1, j) \\
-    \end{array}
-    \right.
-    \end{aligned}
-    $$
-    <\div>
+![Equation](https://ibb.co/t30dCg2)
 
 4. Which one is faster? Recursive or iterative DP?
     * Iterative algorithm goes by solving the smaller problem and then larger ones. This can be slower in case we don't need to solve all kinds of sub problems.
