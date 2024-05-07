@@ -57,6 +57,8 @@ where $a > 0$ and $b>1$
     3. Combine: Combine the solutions of the sub-problems.
 
 2. **Master Theorem:** If $T(n) = aT(\lceil n/b \rceil) + O(n^d)$ for constants $a>0$, $b>1$ and $d\geq0$, then, it can be proven using recurrence trees that:
+
+<div class="math">
 $$
 \begin{aligned}
 T(n) &= \left\{
@@ -68,6 +70,7 @@ O(n^{log_ba}) & \text{for } d < log_ba \\
 \right.
 \end{aligned}
 $$
+</div>
 
 3. Example Problems:
 * **Binary Search** to find the position of an element in a sorted array.
@@ -100,6 +103,7 @@ $$
     mincoins[amount] = 1 + min(mincoins[amount - coin_i] for coin_i in denominations).
     * **Edit distance problem:** 
     Types of possible edits between string1 and string2: matches, mismatches, insertions and deletions. We use 2D dynamic programmming where each matrix element $D[i,j]$ is the edit distance between string1[:i] and string2[:j]. We fill the matrix row by row using the rule:
+    <div class="math">
     $$
     \begin{aligned}
     D[i, j] &= 
@@ -113,6 +117,7 @@ $$
     \right.
     \end{aligned}
     $$
+    <\div>
     * **Discrete Knapsack Problem:** Choosing the object with maximum value per unit weight is not the optimal strategy anymore. Time complexity: $O(nW)$
         * With repetitions: 1D knapsack with:
         <br />$value(w) = \max_{\{i:w_i\leq w\}} \{value(w-w_i)+v_i\}$.
@@ -124,6 +129,7 @@ $$
         * Time complexity: $O(n^3)$.
         * We can determine the element $M(i,j)$ using the recurrence relation ($m(i, j)$ can be determined very similarly by choosing the minimum value instead of maximum):
 
+    <div class="math">
     $$
     \begin{aligned}
     M(i,j) &= 
@@ -137,6 +143,8 @@ $$
     \right.
     \end{aligned}
     $$
+    <\div>
+
 4. Which one is faster? Recursive or iterative DP?
     * Iterative algorithm goes by solving the smaller problem and then larger ones. This can be slower in case we don't need to solve all kinds of sub problems.
     * Recursive algorithm: Top down. Can be slightly slower than iterative algorithms because of the recursion overhead. But can be faster, for example in the case of solving knapsack problem where all object weights are multiples of 100.
