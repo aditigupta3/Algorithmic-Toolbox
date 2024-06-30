@@ -101,7 +101,7 @@ $$
     * **Edit distance problem:** 
     Types of possible edits between string1 and string2: matches, mismatches, insertions and deletions. We use 2D dynamic programmming where each matrix element $D[i,j]$ is the edit distance between string1[:i] and string2[:j]. We fill the matrix row by row using the rule:
     $$
-    \begin{aligned}
+    \begin{align}
     D[i, j] &= 
     min \left\{
     \begin{array}{ll}
@@ -111,7 +111,7 @@ $$
     D[i-1, j-1] & \text{if } string1[i] = string2[j] \text{ for match}\\
     \end{array}
     \right.
-    \end{aligned}
+    \end{align}
     $$
     * **Discrete Knapsack Problem:** Choosing the object with maximum value per unit weight is not the optimal strategy anymore. Time complexity: $O(nW)$
         * With repetitions: 1D knapsack with:
@@ -124,7 +124,7 @@ $$
         * Time complexity: $O(n^3)$.
         * We can determine the element $M(i,j)$ using the recurrence relation ($m(i, j)$ can be determined very similarly by choosing the minimum value instead of maximum):
     $$
-    \begin{aligned}
+    \begin{align}
     M(i,j) &= 
     max_{i\leq k \leq j-1} \left\{
     \begin{array}{ll}
@@ -134,7 +134,7 @@ $$
     m(i, k) op_k m(k+1, j) \\
     \end{array}
     \right.
-    \end{aligned}
+    \end{align}
     $$
 4. Which one is faster? Recursive or iterative DP?
     * Iterative algorithm goes by solving the smaller problem and then larger ones. This can be slower in case we don't need to solve all kinds of sub problems.
